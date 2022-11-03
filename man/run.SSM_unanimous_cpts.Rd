@@ -2,7 +2,7 @@
 % Please edit documentation in R/run.SSM_unanimous_cpts.R
 \name{run.SSM_unanimous_cpts}
 \alias{run.SSM_unanimous_cpts}
-\title{SSM function}
+\title{A helper function of mainfunction \code{SSMimpute_unanimous_cpts}}
 \usage{
 run.SSM_unanimous_cpts(
   data_ss,
@@ -52,5 +52,5 @@ run.SSM_unanimous_cpts(
 a intermediate result
 }
 \description{
-SSM function
+A helper function of mainfunction \code{SSMimpute_unanimous_cpts}
 }

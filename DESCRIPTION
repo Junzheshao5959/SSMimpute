@@ -16,3 +16,9 @@ Imports:
    imputeTS
 URL: https://github.com/Junzheshao5959/SSMimpute
 BugReports: https://github.com/Junzheshao5959/SSMimpute/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)

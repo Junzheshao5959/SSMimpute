@@ -1,4 +1,4 @@
-#' SSM function
+#' A helper function of mainfunction \code{SSMimpute_unanimous_cpts}
 #' @param data_ss contains all information, and only selected variables in formula_var enters the statespace model
 #' @param formula_var select variables from \code{data_ss} into the statespace model
 #' @param ss_param_temp a list of parameters to set up state-space model
@@ -27,7 +27,6 @@
 #' @param printFlag print data while processing
 #'
 #' @return a intermediate result
-#' @export
 #' @importFrom stats rnorm
 #' @importFrom utils head
 #' @importFrom MASS mvrnorm

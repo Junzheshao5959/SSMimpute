@@ -1,0 +1,26 @@
+---
+title: "Introduction of Exploration"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{exploration}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(SSMimpute)
+library(tidyverse)
+library(knitr)
+library(imputeTS)
+library(dlm)
+library(crayon)
+library(MASS)
+```
+As we mentioned in the Quick start, we usually need an initial guess of formula, and `ss_param` and `cpt_learning_param` 
