@@ -21,6 +21,7 @@ You can install the development version of SSMimpute like so:
 
 ``` r
 devtools::install_github("js5959/SSMimpute")
+library(SSMimpute)
 ```
 
 ## Work Flow
@@ -31,9 +32,9 @@ devtools::install_github("js5959/SSMimpute")
   over fitting is partially alleviated by introducing shrinkage. Based
   on the exploration result, we set up the `ss_param` and
   `cpt_learning_param` for the `SSMimpute_unanimous_cpts()` function.
-  See [Introduction to Exploration]() for detail process of exploration
+  See [Introduction to Exploration]() for detail process of exploration.
 
 - Once you set up the parameters based on the exploration, run
-  `SSMimpute_unanimous_cpts()`! You will have estimated coefficient for
+  `SSMimpute_unanimous_cpts()`. You will have estimated coefficient for
   state-space model, and the imputed missing data. See [Quick Start]()
   for a detailed illustration of function usage and analysis of results.

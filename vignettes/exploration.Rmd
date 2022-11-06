@@ -32,8 +32,8 @@ head(data_complex)
 res = shrinkTVP(formula = y ~ y_1 + x + x_1 + c, data = data_complex)
 ```
 We start our exploration:
-```{r}
-explore_SSM(res = res)
+```{r fig.height = 7, fig.width = 16}
+SSMimpute::explore_SSM(res = res)
 ```
 Based on the figures, we notice coefficient of `x` and `c` are probably non-stationary, we further using `bcp` for a Bayesian change point detection, gives a posterior probability of change point in each change point. We notice a clear change point for `x` is 400 and 700. and the coefficent for `c` is probably a random walk.
 
