@@ -105,7 +105,7 @@ columns for corresponding lagged outcomes.</p>
 <span>                                    <span class="op">)</span><span class="op">$</span><span class="va">missing_index</span></span>
 <span><span class="co">#&gt; The missing indicators for MNAR 'increasing' are generated!</span></span></code></pre></div>
 <p><img src="Quick-start_files/figure-html/unnamed-chunk-3-1.png" width="1536"></p>
-<pre><code><span><span class="co">#&gt; The missing rate for MNAR is 0.437</span></span>
+<pre><code><span><span class="co">#&gt; The missing rate for MNAR is 0.449</span></span>
 <span></span>
 <span><span class="va">data</span><span class="op">$</span><span class="va">y</span><span class="op">[</span><span class="va">index_MNAR</span><span class="op">]</span> <span class="op">=</span> <span class="cn">NA</span></span>
 <span><span class="va">data</span><span class="op">$</span><span class="va">y_1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="va">data</span><span class="op">$</span><span class="va">y</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">999</span><span class="op">]</span><span class="op">)</span></span>
@@ -149,7 +149,7 @@ columns for corresponding lagged outcomes.</p>
 <tr class="even">
 <td align="left">3</td>
 <td align="left">2020-02-08</td>
-<td align="right">23.69191</td>
+<td align="right">NA</td>
 <td align="right">10.24018</td>
 <td align="right">7.791593</td>
 <td align="right">20.56619</td>
@@ -159,10 +159,10 @@ columns for corresponding lagged outcomes.</p>
 <tr class="odd">
 <td align="left">4</td>
 <td align="left">2020-02-09</td>
-<td align="right">23.46471</td>
+<td align="right">NA</td>
 <td align="right">11.26975</td>
 <td align="right">5.322497</td>
-<td align="right">23.69191</td>
+<td align="right">NA</td>
 <td align="right">10.240184</td>
 <td align="right">7.791593</td>
 </tr>
@@ -172,7 +172,7 @@ columns for corresponding lagged outcomes.</p>
 <td align="right">20.95864</td>
 <td align="right">10.66030</td>
 <td align="right">7.306048</td>
-<td align="right">23.46471</td>
+<td align="right">NA</td>
 <td align="right">11.269747</td>
 <td align="right">5.322497</td>
 </tr>
@@ -189,7 +189,7 @@ columns for corresponding lagged outcomes.</p>
 <tr class="even">
 <td align="left">7</td>
 <td align="left">2020-02-12</td>
-<td align="right">NA</td>
+<td align="right">22.40664</td>
 <td align="right">11.38117</td>
 <td align="right">6.250145</td>
 <td align="right">23.51839</td>
@@ -242,28 +242,28 @@ introduction), we set up the formula and all the learning parameter in
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">40.2508406</td>
-<td align="right">1.5551497</td>
+<td align="right">40.3051925</td>
+<td align="right">1.2884393</td>
 </tr>
 <tr class="even">
 <td align="left">y_1</td>
-<td align="right">0.4794656</td>
-<td align="right">0.0227584</td>
+<td align="right">0.4702804</td>
+<td align="right">0.0233650</td>
 </tr>
 <tr class="odd">
 <td align="left">x</td>
-<td align="right">-1.5236878</td>
-<td align="right">0.0596471</td>
+<td align="right">-1.5012686</td>
+<td align="right">0.0636861</td>
 </tr>
 <tr class="even">
 <td align="left">x_1</td>
-<td align="right">-0.4898531</td>
-<td align="right">0.0668759</td>
+<td align="right">-0.5103026</td>
+<td align="right">0.0839902</td>
 </tr>
 <tr class="odd">
 <td align="left">c</td>
-<td align="right">-0.9441154</td>
-<td align="right">0.0714497</td>
+<td align="right">-0.9163038</td>
+<td align="right">0.0522802</td>
 </tr>
 </tbody>
 </table>
