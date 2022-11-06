@@ -78,46 +78,6 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Junzheshao5959/SSMimpute" class="external-link">SSMimpute</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; ── <span style="font-weight: bold;">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.1 ──</span></span>
-<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">ggplot2</span> 3.3.6     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">purrr  </span> 0.3.4</span></span>
-<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tibble </span> 3.1.8     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">dplyr  </span> 1.0.9</span></span>
-<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tidyr  </span> 1.2.0     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">stringr</span> 1.4.1</span></span>
-<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">readr  </span> 2.1.2     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">forcats</span> 0.5.2</span></span>
-<span><span class="co">#&gt; ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
-<span><span class="co">#&gt; <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span></span>
-<span><span class="co">#&gt; <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>    masks <span style="color: #0000BB;">stats</span>::lag()</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/" class="external-link">knitr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/SteffenMoritz/imputeTS" class="external-link">imputeTS</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Registered S3 method overwritten by 'quantmod':</span></span>
-<span><span class="co">#&gt;   method            from</span></span>
-<span><span class="co">#&gt;   as.zoo.data.frame zoo</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">dlm</span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'dlm'</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     %+%</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-lib/crayon#readme" class="external-link">crayon</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'crayon'</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:dlm':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     %+%</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     %+%</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/" class="external-link">MASS</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'MASS'</span></span>
-<span><span class="co">#&gt; The following object is masked from 'package:dplyr':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     select</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">bcp</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Loading required package: grid</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">shrinkTVP</span><span class="op">)</span></span></code></pre></div>
 <p>As we mentioned in the Quick start, we usually need an initial guess
 of formula, and set up the <code>ss_param</code> and
 <code>cpt_learning_param</code>, this requires our knowledge of each
@@ -130,7 +90,7 @@ exploration and help users identify the formula and parameters as easy
 as a one line code. The idea is based on <code>shrinkTVP</code> which
 incorporates Bayesian hierarchical shrinkage for state-space model, to
 achieve a two-way sparsity. Details can be found:..</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data_complex</span><span class="op">)</span></span>
 <span><span class="co">#&gt;         Date        y          x         c      y_1        x_1</span></span>
 <span><span class="co">#&gt; 2 2020-02-07 79.43535 12.3290419  6.145098 82.18145  2.4949289</span></span>
@@ -139,70 +99,70 @@ achieve a two-way sparsity. Details can be found:..</p>
 <span><span class="co">#&gt; 5 2020-02-10 83.22922  7.6992702  4.533435 85.71720  0.9862238</span></span>
 <span><span class="co">#&gt; 6 2020-02-11 88.17003 11.7192263 11.722012 83.22922  7.6992702</span></span>
 <span><span class="co">#&gt; 7 2020-02-12 86.50519 10.2398440 10.196931 88.17003 11.7192263</span></span>
-<span><span class="va">res</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/shrinkTVP/man/shrinkTVP.html" class="external-link">shrinkTVP</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="va">y</span> <span class="op">~</span> <span class="va">y_1</span> <span class="op">+</span> <span class="va">x</span> <span class="op">+</span> <span class="va">x_1</span> <span class="op">+</span> <span class="va">c</span>, data <span class="op">=</span> <span class="va">data_complex</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">res</span> <span class="op">=</span> <span class="fu">shrinkTVP</span><span class="op">(</span>formula <span class="op">=</span> <span class="va">y</span> <span class="op">~</span> <span class="va">y_1</span> <span class="op">+</span> <span class="va">x</span> <span class="op">+</span> <span class="va">x_1</span> <span class="op">+</span> <span class="va">c</span>, data <span class="op">=</span> <span class="va">data_complex</span><span class="op">)</span></span></code></pre></div>
 <p>We start our exploration:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">SSMimpute</span><span class="fu">::</span><span class="fu"><a href="../reference/explore_SSM.html">explore_SSM</a></span><span class="op">(</span>res <span class="op">=</span> <span class="va">res</span><span class="op">)</span></span></code></pre></div>
-<p><img src="exploration_files/figure-html/unnamed-chunk-3-1.png" width="1536"></p>
+<p><img src="exploration_files/figure-html/unnamed-chunk-4-1.png" width="1536"></p>
 <pre><code><span><span class="co">#&gt; Hit &lt;Return&gt; to see next plot:</span></span></code></pre>
-<p><img src="exploration_files/figure-html/unnamed-chunk-3-2.png" width="1536"><img src="exploration_files/figure-html/unnamed-chunk-3-3.png" width="1536"></p>
+<p><img src="exploration_files/figure-html/unnamed-chunk-4-2.png" width="1536"><img src="exploration_files/figure-html/unnamed-chunk-4-3.png" width="1536"></p>
 <pre><code><span><span class="co">#&gt; Warning: `as.tibble()` was deprecated in tibble 2.0.0.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Please use `as_tibble()` instead.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> The signature and semantics have changed, see `?as_tibble`.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> The deprecated feature was likely used in the <span style="color: #0000BB;">SSMimpute</span> package.</span></span>
 <span><span class="co">#&gt;   Please report the issue at</span></span>
 <span><span class="co">#&gt;   <span style="color: #0000BB; font-style: italic;">&lt;</span></span></span></code></pre>
-<p><img src="exploration_files/figure-html/unnamed-chunk-3-4.png" width="1536"></p>
+<p><img src="exploration_files/figure-html/unnamed-chunk-4-4.png" width="1536"></p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 7</span></span></span>
 <span><span class="co">#&gt;   coef        mean      sd median   HPD1   HPD2 ESS.var1</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Intercept 39.6   0.248   39.5   39.1   40.0        511</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> y_1        0.505 0.003<span style="text-decoration: underline;">16</span>  0.506  0.499  0.511      185</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> x         -<span style="color: #BB0000;">0.924</span> 0.098<span style="text-decoration: underline;">3</span>  -<span style="color: #BB0000;">0.926</span> -<span style="color: #BB0000;">1.12</span>  -<span style="color: #BB0000;">0.734</span>      734</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> x_1       -<span style="color: #BB0000;">0.498</span> 0.008<span style="text-decoration: underline;">99</span> -<span style="color: #BB0000;">0.498</span> -<span style="color: #BB0000;">0.515</span> -<span style="color: #BB0000;">0.480</span>      801</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> c          1.79  0.108    1.80   1.58   2.00       400</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Intercept 39.5   0.245   39.5   39.0   40.0        510</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> y_1        0.506 0.003<span style="text-decoration: underline;">84</span>  0.506  0.497  0.513      143</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> x         -<span style="color: #BB0000;">0.925</span> 0.096<span style="text-decoration: underline;">7</span>  -<span style="color: #BB0000;">0.927</span> -<span style="color: #BB0000;">1.11</span>  -<span style="color: #BB0000;">0.732</span>     <span style="text-decoration: underline;">1</span>044</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> x_1       -<span style="color: #BB0000;">0.497</span> 0.009<span style="text-decoration: underline;">35</span> -<span style="color: #BB0000;">0.497</span> -<span style="color: #BB0000;">0.516</span> -<span style="color: #BB0000;">0.480</span>      536</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> c          1.80  0.104    1.80   1.60   2.00       423</span></span>
 <span><span class="co">#&gt; Press [enter] to see the non-stationary coefficient: </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2 × 7</span></span></span>
 <span><span class="co">#&gt;   variance   mean      sd median   HPD1   HPD2 ESS.var1</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> x        0.057<span style="text-decoration: underline;">8</span> 0.002<span style="text-decoration: underline;">62</span> 0.057<span style="text-decoration: underline;">7</span> 0.052<span style="text-decoration: underline;">7</span> 0.062<span style="text-decoration: underline;">8</span>      611</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> c        0.042<span style="text-decoration: underline;">1</span> 0.003<span style="text-decoration: underline;">07</span> 0.041<span style="text-decoration: underline;">9</span> 0.036<span style="text-decoration: underline;">4</span> 0.048<span style="text-decoration: underline;">7</span>      261</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> x        0.057<span style="text-decoration: underline;">7</span> 0.002<span style="text-decoration: underline;">63</span> 0.057<span style="text-decoration: underline;">6</span> 0.052<span style="text-decoration: underline;">3</span> 0.062<span style="text-decoration: underline;">6</span>      589</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> c        0.042<span style="text-decoration: underline;">2</span> 0.003<span style="text-decoration: underline;">12</span> 0.042<span style="text-decoration: underline;">1</span> 0.036<span style="text-decoration: underline;">0</span> 0.048<span style="text-decoration: underline;">0</span>      255</span></span>
 <span><span class="co">#&gt; indicating non-stationary process for:  x c ; </span></span>
 <span><span class="co">#&gt; Press [enter] to further checking for change points:</span></span></code></pre>
-<p><img src="exploration_files/figure-html/unnamed-chunk-3-5.png" width="1536"><img src="exploration_files/figure-html/unnamed-chunk-3-6.png" width="1536"></p>
+<p><img src="exploration_files/figure-html/unnamed-chunk-4-5.png" width="1536"><img src="exploration_files/figure-html/unnamed-chunk-4-6.png" width="1536"></p>
 <pre><code><span><span class="co">#&gt; Press [enter] to further checking fitted ARIMA model</span></span>
 <span><span class="co">#&gt; Series: B_1 </span></span>
 <span><span class="co">#&gt; ARIMA(1,1,0) </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
 <span><span class="co">#&gt;          ar1</span></span>
-<span><span class="co">#&gt;       0.4822</span></span>
+<span><span class="co">#&gt;       0.4824</span></span>
 <span><span class="co">#&gt; s.e.  0.0277</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; sigma^2 = 0.001123:  log likelihood = 1975.3</span></span>
-<span><span class="co">#&gt; AIC=-3946.61   AICc=-3946.59   BIC=-3936.79</span></span>
+<span><span class="co">#&gt; sigma^2 = 0.001118:  log likelihood = 1977.77</span></span>
+<span><span class="co">#&gt; AIC=-3951.54   AICc=-3951.53   BIC=-3941.73</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Training set error measures:</span></span>
-<span><span class="co">#&gt;                         ME       RMSE        MAE          MPE     MAPE    MASE</span></span>
-<span><span class="co">#&gt; Training set -1.010994e-06 0.03347854 0.01987027 -0.003486026 1.588501 1.01783</span></span>
+<span><span class="co">#&gt;                       ME       RMSE        MAE          MPE     MAPE     MASE</span></span>
+<span><span class="co">#&gt; Training set 1.59262e-06 0.03339588 0.01977559 -0.003725557 1.579186 1.016588</span></span>
 <span><span class="co">#&gt;                     ACF1</span></span>
-<span><span class="co">#&gt; Training set -0.01037986</span></span>
+<span><span class="co">#&gt; Training set -0.01078407</span></span>
 <span><span class="co">#&gt; Series: B_1 </span></span>
 <span><span class="co">#&gt; ARIMA(1,1,2) </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
 <span><span class="co">#&gt;          ar1      ma1      ma2</span></span>
-<span><span class="co">#&gt;       0.8263  -0.3467  -0.0676</span></span>
-<span><span class="co">#&gt; s.e.  0.0385   0.0520   0.0408</span></span>
+<span><span class="co">#&gt;       0.8300  -0.3613  -0.0668</span></span>
+<span><span class="co">#&gt; s.e.  0.0376   0.0511   0.0401</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; sigma^2 = 0.0002019:  log likelihood = 2833.3</span></span>
-<span><span class="co">#&gt; AIC=-5658.59   AICc=-5658.55   BIC=-5638.96</span></span>
+<span><span class="co">#&gt; sigma^2 = 0.0002044:  log likelihood = 2827.31</span></span>
+<span><span class="co">#&gt; AIC=-5646.61   AICc=-5646.57   BIC=-5626.99</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Training set error measures:</span></span>
-<span><span class="co">#&gt;                        ME       RMSE         MAE        MPE      MAPE     MASE</span></span>
-<span><span class="co">#&gt; Training set 0.0003296315 0.01418158 0.009160735 0.01789687 0.4691585 0.709273</span></span>
+<span><span class="co">#&gt;                        ME       RMSE         MAE        MPE      MAPE      MASE</span></span>
+<span><span class="co">#&gt; Training set 0.0003281337 0.01426691 0.009231146 0.01782985 0.4730537 0.7139447</span></span>
 <span><span class="co">#&gt;                     ACF1</span></span>
-<span><span class="co">#&gt; Training set 0.002605382</span></span></code></pre>
+<span><span class="co">#&gt; Training set 0.002424204</span></span></code></pre>
 <p>Based on the figures, we notice coefficient of <code>x</code> and
 <code>c</code> are probably non-stationary, we further using
 <code>bcp</code> for a Bayesian change point detection, gives a
