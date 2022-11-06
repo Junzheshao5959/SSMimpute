@@ -13,14 +13,12 @@ The goal of SSMimpute is to …
 You can install the development version of SSMimpute like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("js5959/SSMimpute")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(SSMimpute)
-## basic example code
-```
+The workflow is: - Data exploration: Using
+``` shrinkTVP()``explore_SSM ``` function to get some sense of the data,
+identify the formula, check the possible ARIMA model of latent space and
+find the change points. The problem of over fitting is partially
+alleviated by introducing shrinkage. Based on the exploration result, we
+have the

@@ -13,6 +13,7 @@ Imports:
    shrinkTVP,
    dlm,
    bcp,
+   forecast,
    imputeTS
 URL: https://github.com/Junzheshao5959/SSMimpute
 BugReports: https://github.com/Junzheshao5959/SSMimpute/issues

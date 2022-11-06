@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
+knitr::opts_chunk$set(include = FALSE)
 library(SSMimpute)
 library(tidyverse)
 library(knitr)
@@ -22,5 +23,20 @@ library(imputeTS)
 library(dlm)
 library(crayon)
 library(MASS)
+library(bcp)
+library(shrinkTVP)
 ```
-As we mentioned in the Quick start, we usually need an initial guess of formula, and `ss_param` and `cpt_learning_param` 
+As we mentioned in the Quick start, we usually need an initial guess of formula, and set up the `ss_param` and `cpt_learning_param`, this requires our knowledge of each coefficient $\beta_{j,t}$ and we will ask questions of whether this variables should goes into our model, what is the state-space equation, what is an appropriate initial value and if there is any change point. Sometimes this question can be answered by domain knowledge. Here we provide a function for an automatically exploration and help users identify the formula and parameters as easy as a one line code. The idea is based on `shrinkTVP` which incorporates Bayesian hierarchical shrinkage for state-space model, to achieve a two-way sparsity. Details can be found:..
+
+```{r}
+head(data_complex)
+res = shrinkTVP(formula = y ~ y_1 + x + x_1 + c, data = data_complex)
+```
+We start our exploration:
+```{r}
+explore_SSM(res = res)
+```
+Based on the figures, we notice coefficient of `x` and `c` are probably non-stationary, we further using `bcp` for a Bayesian change point detection, gives a posterior probability of change point in each change point. We notice a clear change point for `x` is 400 and 700. and the coefficent for `c` is probably a random walk.
+
+
+
