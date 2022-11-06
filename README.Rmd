@@ -16,9 +16,12 @@ knitr::opts_chunk$set(
 # SSMimpute
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/SSMimpute)](https://CRAN.R-project.org/package=SSMimpute)
 <!-- badges: end -->
 
-The goal of SSMimpute is to ...
+The goal of SSMimpute is to address missing data in possibly
+non-stationary multivariate time series. This is a multiple imputation strategy based
+on the state space model. This package implements the methods SSMimpute introduced by [Xiaoxuan Cai et al., 2022](https://arxiv.org/pdf/2206.14343.pdf).
 
 ## Installation
 
@@ -26,10 +29,14 @@ You can install the development version of SSMimpute like so:
 
 ```{r eval=FALSE}
 devtools::install_github("js5959/SSMimpute")
+library(SSMimpute)
 ```
 
 
-The workflow is:
-- Data exploration: Using `shrinkTVP()``explore_SSM` function to get some sense of the data, identify the formula, check the possible ARIMA model of latent space and find the change points. The problem of over fitting is partially alleviated by introducing shrinkage. Based on the exploration result, we have the
+## Work Flow
+  
+- Data exploration: Using `shrinkTVP()` and `explore_SSM` function to get some sense of the data, identify the formula, check the possible ARIMA model of latent space and find the change points. The problem of over fitting is partially alleviated by introducing shrinkage. Based on the exploration result, we set up the `ss_param` and `cpt_learning_param` for the `SSMimpute_unanimous_cpts()` function. See [Introduction to Exploration]() for detail process of exploration
+
+- Once you set up the parameters based on the exploration, run `SSMimpute_unanimous_cpts()`. You will have estimated coefficient for state-space model, and the imputed missing data. See [Quick Start]() for a detailed illustration of function usage and analysis of results.
 
 

@@ -2,7 +2,11 @@ Package: SSMimpute
 Type: Package
 Title: State-space Model Multiple Imputation for Missing Data in non-stationary Multivariate Time Series
 Version: 0.1.0
-Author: Junzhe Shao
+Authors@R: c(
+    person("Junzhe", "Shao", role = c("aut", "cre"), email = "js5959@cumc.columbia.edu"),
+    person("Xiaoxuan", "Cai", role = "aut", email = "cai.1083@osu.edu"),
+    person("Linda", "Valeri", role = "aut", email = "lv2424@cumc.columbia.edu")
+    )
 Maintainer: Junzhe Shao <js5959@columbia.edu>
 Description: This is an R package implementing the method in "State space model multiple imputation for missing data in non-stationary multivariate time series with application in digital Psychiatry", arXiv2206.14343.
 License: GPL-3

@@ -79,7 +79,7 @@ result_SSMimpute1=SSMimpute_unanimous_cpts(data_ss_ori=data_space_SSMimpute,form
 # Analysis of Result
 Now we take a close look at the result generated from `SSMimpute_unanimous_cpts()`
 
-Estimated Coefficient:
+Estimated coefficient:
 ```{r}
 #kable(result_statespace_SSMimpute1$result_convergence)
 #kable(result_statespace_SSMimpute1$result_convergence_mp)
