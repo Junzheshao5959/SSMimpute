@@ -26,7 +26,7 @@ library(SSMimpute)
 
 ## Work Flow
 
-- Data exploration: Using `shrinkTVP()` and `explore_SSM` function to
+- Data exploration: Using `shrinkTVP()` and `explore_SSM()` function to
   get some sense of the data, identify the formula, check the possible
   ARIMA model of latent space and find the change points. The problem of
   over fitting is partially alleviated by introducing shrinkage. Based

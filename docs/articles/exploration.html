@@ -116,17 +116,17 @@ achieve a two-way sparsity. Details can be found:..</p>
 <pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 7</span></span></span>
 <span><span class="co">#&gt;   coef        mean      sd median   HPD1   HPD2 ESS.var1</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Intercept 39.5   0.245   39.5   39.0   40.0        510</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> y_1        0.506 0.003<span style="text-decoration: underline;">84</span>  0.506  0.497  0.513      143</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> x         -<span style="color: #BB0000;">0.925</span> 0.096<span style="text-decoration: underline;">7</span>  -<span style="color: #BB0000;">0.927</span> -<span style="color: #BB0000;">1.11</span>  -<span style="color: #BB0000;">0.732</span>     <span style="text-decoration: underline;">1</span>044</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> x_1       -<span style="color: #BB0000;">0.497</span> 0.009<span style="text-decoration: underline;">35</span> -<span style="color: #BB0000;">0.497</span> -<span style="color: #BB0000;">0.516</span> -<span style="color: #BB0000;">0.480</span>      536</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> c          1.80  0.104    1.80   1.60   2.00       423</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Intercept 39.5   0.236   39.5   39.1   40.0        637</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> y_1        0.506 0.002<span style="text-decoration: underline;">81</span>  0.506  0.500  0.511      411</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> x         -<span style="color: #BB0000;">0.932</span> 0.100   -<span style="color: #BB0000;">0.932</span> -<span style="color: #BB0000;">1.14</span>  -<span style="color: #BB0000;">0.747</span>      890</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> x_1       -<span style="color: #BB0000;">0.499</span> 0.008<span style="text-decoration: underline;">74</span> -<span style="color: #BB0000;">0.499</span> -<span style="color: #BB0000;">0.515</span> -<span style="color: #BB0000;">0.481</span>      911</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> c          1.80  0.111    1.80   1.59   2.02       376</span></span>
 <span><span class="co">#&gt; Press [enter] to see the non-stationary coefficient: </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2 × 7</span></span></span>
 <span><span class="co">#&gt;   variance   mean      sd median   HPD1   HPD2 ESS.var1</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> x        0.057<span style="text-decoration: underline;">7</span> 0.002<span style="text-decoration: underline;">63</span> 0.057<span style="text-decoration: underline;">6</span> 0.052<span style="text-decoration: underline;">3</span> 0.062<span style="text-decoration: underline;">6</span>      589</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> c        0.042<span style="text-decoration: underline;">2</span> 0.003<span style="text-decoration: underline;">12</span> 0.042<span style="text-decoration: underline;">1</span> 0.036<span style="text-decoration: underline;">0</span> 0.048<span style="text-decoration: underline;">0</span>      255</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> x        0.057<span style="text-decoration: underline;">5</span> 0.002<span style="text-decoration: underline;">55</span> 0.057<span style="text-decoration: underline;">4</span> 0.052<span style="text-decoration: underline;">4</span> 0.062<span style="text-decoration: underline;">4</span>      622</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> c        0.042<span style="text-decoration: underline;">5</span> 0.002<span style="text-decoration: underline;">95</span> 0.042<span style="text-decoration: underline;">4</span> 0.037<span style="text-decoration: underline;">0</span> 0.048<span style="text-decoration: underline;">6</span>      292</span></span>
 <span><span class="co">#&gt; indicating non-stationary process for:  x c ; </span></span>
 <span><span class="co">#&gt; Press [enter] to further checking for change points:</span></span></code></pre>
 <p><img src="exploration_files/figure-html/unnamed-chunk-4-5.png" width="1536"><img src="exploration_files/figure-html/unnamed-chunk-4-6.png" width="1536"></p>
@@ -136,33 +136,33 @@ achieve a two-way sparsity. Details can be found:..</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
 <span><span class="co">#&gt;          ar1</span></span>
-<span><span class="co">#&gt;       0.4824</span></span>
-<span><span class="co">#&gt; s.e.  0.0277</span></span>
+<span><span class="co">#&gt;       0.4882</span></span>
+<span><span class="co">#&gt; s.e.  0.0276</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; sigma^2 = 0.001118:  log likelihood = 1977.77</span></span>
-<span><span class="co">#&gt; AIC=-3951.54   AICc=-3951.53   BIC=-3941.73</span></span>
+<span><span class="co">#&gt; sigma^2 = 0.001099:  log likelihood = 1986.06</span></span>
+<span><span class="co">#&gt; AIC=-3968.13   AICc=-3968.12   BIC=-3958.31</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Training set error measures:</span></span>
-<span><span class="co">#&gt;                       ME       RMSE        MAE          MPE     MAPE     MASE</span></span>
-<span><span class="co">#&gt; Training set 1.59262e-06 0.03339588 0.01977559 -0.003725557 1.579186 1.016588</span></span>
+<span><span class="co">#&gt;                        ME       RMSE        MAE          MPE     MAPE     MASE</span></span>
+<span><span class="co">#&gt; Training set 3.334329e-06 0.03311972 0.01960314 -0.003236499 1.566561 1.014579</span></span>
 <span><span class="co">#&gt;                     ACF1</span></span>
-<span><span class="co">#&gt; Training set -0.01078407</span></span>
+<span><span class="co">#&gt; Training set -0.01030269</span></span>
 <span><span class="co">#&gt; Series: B_1 </span></span>
-<span><span class="co">#&gt; ARIMA(1,1,2) </span></span>
+<span><span class="co">#&gt; ARIMA(1,1,3) </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Coefficients:</span></span>
-<span><span class="co">#&gt;          ar1      ma1      ma2</span></span>
-<span><span class="co">#&gt;       0.8300  -0.3613  -0.0668</span></span>
-<span><span class="co">#&gt; s.e.  0.0376   0.0511   0.0401</span></span>
+<span><span class="co">#&gt;          ar1      ma1      ma2      ma3</span></span>
+<span><span class="co">#&gt;       0.8548  -0.3821  -0.0604  -0.0561</span></span>
+<span><span class="co">#&gt; s.e.  0.0373   0.0494   0.0386   0.0366</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; sigma^2 = 0.0002044:  log likelihood = 2827.31</span></span>
-<span><span class="co">#&gt; AIC=-5646.61   AICc=-5646.57   BIC=-5626.99</span></span>
+<span><span class="co">#&gt; sigma^2 = 0.0002094:  log likelihood = 2815.62</span></span>
+<span><span class="co">#&gt; AIC=-5621.23   AICc=-5621.17   BIC=-5596.7</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Training set error measures:</span></span>
 <span><span class="co">#&gt;                        ME       RMSE         MAE        MPE      MAPE      MASE</span></span>
-<span><span class="co">#&gt; Training set 0.0003281337 0.01426691 0.009231146 0.01782985 0.4730537 0.7139447</span></span>
-<span><span class="co">#&gt;                     ACF1</span></span>
-<span><span class="co">#&gt; Training set 0.002424204</span></span></code></pre>
+<span><span class="co">#&gt; Training set 0.0003189125 0.01443484 0.009331966 0.01776838 0.4781171 0.7155405</span></span>
+<span><span class="co">#&gt;                       ACF1</span></span>
+<span><span class="co">#&gt; Training set -4.145881e-05</span></span></code></pre>
 <p>Based on the figures, we notice coefficient of <code>x</code> and
 <code>c</code> are probably non-stationary, we further using
 <code>bcp</code> for a Bayesian change point detection, gives a
