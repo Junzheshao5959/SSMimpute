@@ -28,7 +28,7 @@ $$
 
 ```{r include=FALSE}
 library(SSMimpute)
-data_stationary
+data_randomwalk
 ```
 
 # Generate Missing Index
@@ -36,7 +36,7 @@ data_stationary
 Then using the function `generate.missing_index()` provided in our package, we create a MNAR missing index, and create the columns for corresponding lagged outcomes.
 
 ```{r fig.height = 7, fig.width = 16}
-data = data_stationary#using data_stationary
+data = data_randomwalk#using data_stationary
 index_MNAR = generate.missing_index(type = "MNAR", 
                                     n=length(data$y),
                                     param = list(data = data.frame(y=data$y,x=data$x),
@@ -45,11 +45,12 @@ index_MNAR = generate.missing_index(type = "MNAR",
                                                  MNAR.drawplot = c(TRUE, "y"))
                                     )$missing_index
 
-data$y[index_MNAR] = NA
+#data$y[index_MNAR] = NA
 data$y_1 = c(NA,data$y[1:999])
 data$x_1 = c(NA,data$x[1:999])
 data$c_1 = c(NA,data$c[1:999])
 data = data[c(2:1000),]
+write_csv(data, "sample_data_complete.csv")
 data_space_SSMimpute = data
 kable(head(data_space_SSMimpute))
 imputeTS::ggplot_na_distribution(data_space_SSMimpute$y, color_missing = "pink",color_missing_border = "pink", alpha_missing = 0.1)

@@ -22,7 +22,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">SSMimpute</a>
 
@@ -105,7 +105,7 @@ columns for corresponding lagged outcomes.</p>
 <span>                                    <span class="op">)</span><span class="op">$</span><span class="va">missing_index</span></span>
 <span><span class="co">#&gt; The missing indicators for MNAR 'increasing' are generated!</span></span></code></pre></div>
 <p><img src="Quick-start_files/figure-html/unnamed-chunk-3-1.png" width="1536"></p>
-<pre><code><span><span class="co">#&gt; The missing rate for MNAR is 0.43</span></span>
+<pre><code><span><span class="co">#&gt; The missing rate for MNAR is 0.46</span></span>
 <span></span>
 <span><span class="va">data</span><span class="op">$</span><span class="va">y</span><span class="op">[</span><span class="va">index_MNAR</span><span class="op">]</span> <span class="op">=</span> <span class="cn">NA</span></span>
 <span><span class="va">data</span><span class="op">$</span><span class="va">y_1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="va">data</span><span class="op">$</span><span class="va">y</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">999</span><span class="op">]</span><span class="op">)</span></span>
@@ -139,7 +139,7 @@ columns for corresponding lagged outcomes.</p>
 <tr class="odd">
 <td align="left">2</td>
 <td align="left">2020-02-07</td>
-<td align="right">20.56619</td>
+<td align="right">NA</td>
 <td align="right">10.73859</td>
 <td align="right">8.716357</td>
 <td align="right">23.43100</td>
@@ -152,7 +152,7 @@ columns for corresponding lagged outcomes.</p>
 <td align="right">NA</td>
 <td align="right">10.24018</td>
 <td align="right">7.791593</td>
-<td align="right">20.56619</td>
+<td align="right">NA</td>
 <td align="right">10.738591</td>
 <td align="right">8.716357</td>
 </tr>
@@ -179,7 +179,7 @@ columns for corresponding lagged outcomes.</p>
 <tr class="odd">
 <td align="left">6</td>
 <td align="left">2020-02-11</td>
-<td align="right">NA</td>
+<td align="right">23.51839</td>
 <td align="right">10.56685</td>
 <td align="right">7.330904</td>
 <td align="right">20.95864</td>
@@ -192,7 +192,7 @@ columns for corresponding lagged outcomes.</p>
 <td align="right">22.40664</td>
 <td align="right">11.38117</td>
 <td align="right">6.250145</td>
-<td align="right">NA</td>
+<td align="right">23.51839</td>
 <td align="right">10.566847</td>
 <td align="right">7.330904</td>
 </tr>
@@ -242,28 +242,28 @@ introduction), we set up the formula and all the learning parameter in
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">41.2722597</td>
-<td align="right">1.6522823</td>
+<td align="right">41.8260426</td>
+<td align="right">1.5690795</td>
 </tr>
 <tr class="even">
 <td align="left">y_1</td>
-<td align="right">0.4663762</td>
-<td align="right">0.0219041</td>
+<td align="right">0.4607595</td>
+<td align="right">0.0256214</td>
 </tr>
 <tr class="odd">
 <td align="left">x</td>
-<td align="right">-1.4645646</td>
-<td align="right">0.0691181</td>
+<td align="right">-1.4920563</td>
+<td align="right">0.0625198</td>
 </tr>
 <tr class="even">
 <td align="left">x_1</td>
-<td align="right">-0.5713279</td>
-<td align="right">0.0958881</td>
+<td align="right">-0.5985293</td>
+<td align="right">0.0901322</td>
 </tr>
 <tr class="odd">
 <td align="left">c</td>
-<td align="right">-1.0112548</td>
-<td align="right">0.0643667</td>
+<td align="right">-0.9763831</td>
+<td align="right">0.0530130</td>
 </tr>
 </tbody>
 </table>
